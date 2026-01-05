@@ -1,0 +1,9 @@
+﻿#SQL Server
+#add-migration <MigrationName>
+This command generates a new migration based on changes you have made to your DbContext or entity classes. The <MigrationName> is a descriptive name for the migration, which will help you identify it later. The generated migration file contains code that will update your database schema to match the current state of your entity models.
+
+#remove-migration
+This command removes the last migration that was added but not yet applied to the database. It is useful when you want to discard an incomplete or incorrect migration. Note that this command does not affect the database; it only removes the migration files.
+
+#update-database
+This command applies any pending migrations to the database. It updates the database schema to match the current state of your DbContext as defined by the migration files. This command is used to synchronize your database with the latest migration changes.

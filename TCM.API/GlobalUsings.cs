@@ -1,0 +1,17 @@
+﻿global using FluentValidation;
+global using MediatR;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Diagnostics;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
+global using System.Net.Http.Headers;
+global using System.Security.Claims;
+global using System.Text;
+global using TCM.API.Exceptions.Handler;
+global using TCM.API.Extensions;
+global using TCM.API.Middleware;
+global using TCM.Application;
+global using TCM.Application.Features.Authentication.Commands.Login;
+global using TCM.Infrastructure;
+global using TCM.Persistence;

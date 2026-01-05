@@ -1,0 +1,15 @@
+﻿global using AutoMapper;
+global using FluentValidation;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Linq.Expressions;
+global using System.Reflection;
+global using TCM.Application.Common.Constants;
+global using TCM.Application.Common.Helpers;
+global using TCM.Application.Contracts.Infrastructure;
+global using TCM.Application.Contracts.Persistence;
+global using TCM.Application.DTOs;
+global using TCM.Domain;
+global using TCM.Domain.Common;

@@ -1,0 +1,11 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Query;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Linq.Expressions;
+global using TCM.Application.Contracts.Persistence;
+global using TCM.Domain;
+global using TCM.Domain.Common;
+global using TCM.Domain.Enum;
+global using TCM.Persistence.DBContext;
+global using TCM.Persistence.Repositories;
