@@ -27,6 +27,7 @@ namespace TCM.API.Controllers
         }
         #endregion
 
+        #region CreateParent
         [HttpPost]
         public async Task<IActionResult> CreateParent(
         [FromBody] CreateParentCommand command)
@@ -34,6 +35,7 @@ namespace TCM.API.Controllers
             var parentId = await _mediator.Send(command);
             return Ok(parentId);
         }
+        #endregion
 
         #region UpdateParent
         [HttpPut("{id:long}")]

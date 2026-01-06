@@ -19,10 +19,4 @@
     <ProjectReference Include="..\TCM.Domain\TCM.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Students\Commands\Update\" />
-    <Folder Include="Features\Students\Queries\GetById\" />
-    <Folder Include="Features\Students\Queries\GetAllPaggedData\" />
-  </ItemGroup>
-
 </Project>

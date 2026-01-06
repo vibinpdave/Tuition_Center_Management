@@ -1,4 +1,5 @@
 ﻿using TCM.Application.Features.Students.Commands.Create;
+using TCM.Application.Features.Students.Commands.Update;
 
 namespace TCM.Application.MappingProfiles
 {
@@ -23,6 +24,23 @@ namespace TCM.Application.MappingProfiles
                 .ForMember(dest => dest.ParentId, opt => opt.MapFrom(src => src.ParentId))
                 .ForMember(dest => dest.GradeId, opt => opt.MapFrom(src => src.GradeId))
                 .ForMember(dest => dest.UserId, opt => opt.Ignore()); // will set after user creation
+
+            CreateMap<UpdateStudentCommand, Student>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ForMember(dest => dest.User, opt => opt.Ignore());
+
+            CreateMap<UpdateStudentCommand, User>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.Password, opt => opt.Ignore())
+                .ForMember(dest => dest.UserRoleId, opt => opt.Ignore());
+
+            CreateMap<Student, StudentDTO>()
+                .ForMember(d => d.Email, o => o.MapFrom(s => s.User.Email))
+                .ForMember(d => d.Status, o => o.MapFrom(s => s.Status));
+
+            CreateMap<Parent, ParentDTO>();
+            CreateMap<Grade, GradeDTO>();
         }
     }
 }

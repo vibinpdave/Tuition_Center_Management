@@ -32,7 +32,7 @@ namespace TCM.Application.Features.Students.Commands.SoftDelete
             if (studentObj == null)
                 throw new ArgumentException(ValidationMessages.STUDENT_NOT_FOUND);
 
-            // Soft delete teacher
+            // Soft delete student
             studentObj.Status = (int)Status.Deleted;
 
             // Disable login
